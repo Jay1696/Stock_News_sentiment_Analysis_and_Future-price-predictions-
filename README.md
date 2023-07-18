@@ -12,9 +12,7 @@ This GitHub repository contains code for performing stock news sentiment analysi
 - Decision tree classification: The code performs decision tree classification to predict stock price movement.
 
 ### Usage
-1. Clone the repository: `git clone <repository_url>`
-2. Install the required libraries: `pip install -r requirements.txt`
-3. Run the code: `python main.py`
+1. Clone the repository: `git clone <repository_url> https://github.com/Jay1696/Stock_News_sentiment_Analysis_and_Future-price-predictions-.git`
 
 ### Contributing
 Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
@@ -36,4 +34,4 @@ This project is for educational and informational purposes only. It should not b
 - [scikit-learn](https://scikit-learn.org/)
 - [matplotlib](https://matplotlib.org/)
 
-**Note:** Replace `<repository_url>` with the actual URL of the GitHub repository.
+
