@@ -1,69 +1,39 @@
-# Stock_News_sentiment_Analysis_and_Future-price-predictions
+## Stock News Sentiment Analysis and Visualization with Prediction
 
-This report provides an overview of the code for performing stock news sentiment analysis, visualization, and prediction. The code consists of several sections that perform different tasks. Let's go through each section and understand its purpose.
+This GitHub repository contains code for performing stock news sentiment analysis, visualization, and prediction. The project aims to analyze the sentiment of news articles related to specific stocks, visualize the sentiment trends over time, and make predictions on stock prices using machine learning algorithms.
 
-**1. Loading Required Libraries:**
+### Features
+- Scraping news articles: The code scrapes news articles from the "finviz.com" website using BeautifulSoup.
+- Sentiment analysis: It uses the VADER sentiment analysis tool to analyze the sentiment of the news article titles.
+- Visualization: The code visualizes the sentiment trends over time using bar charts and line charts.
+- Sentiment classification: It classifies the sentiment of each news article title as positive, negative, or neutral.
+- Stock price prediction: The code uses the XGBoost regressor to predict stock prices based on historical data and sentiment scores.
+- Accuracy calculation: It evaluates the accuracy of the predicted stock prices compared to the real prices.
+- Decision tree classification: The code performs decision tree classification to predict stock price movement.
 
-The code begins by importing the necessary libraries, including `urlopen` and `Request` from `urllib.request`, `BeautifulSoup` from `bs4`, `SentimentIntensityAnalyzer` from `nltk.sentiment.vader`, `pandas`, `matplotlib.pyplot`, and `datetime`.
+### Usage
+1. Clone the repository: `git clone <repository_url>`
+2. Install the required libraries: `pip install -r requirements.txt`
+3. Run the code: `python main.py`
 
-**2. Scraping News Articles:**
+### Contributing
+Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-The code prompts the user to enter a stock name and then scrapes news articles related to that stock from the "finviz.com" website using BeautifulSoup. It retrieves the HTML code and extracts the news article table.
+### License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-**3. Parsing and Creating DataFrame:**
+### Acknowledgements
+- The code is based on various libraries and tools, including BeautifulSoup, NLTK, pandas, matplotlib, scikit-learn, and XGBoost.
+- The project is developed by the Pycodes group.
 
-The code parses the data in the news table, extracts the ticker, date, time, and title of each article, and creates a DataFrame with this information.
+### Disclaimer
+This project is for educational and informational purposes only. It should not be considered as financial advice. The accuracy of the stock predictions may vary, and users should perform their own research and analysis before making any investment decisions.
 
-**4. Sentiment Analysis:**
+### References
+- [finviz.com](https://finviz.com/)
+- [NLTK SentimentIntensityAnalyzer](https://www.nltk.org/api/nltk.sentiment.html#module-nltk.sentiment.vader)
+- [XGBoost](https://xgboost.readthedocs.io/)
+- [scikit-learn](https://scikit-learn.org/)
+- [matplotlib](https://matplotlib.org/)
 
-The code uses the VADER (Valence Aware Dictionary and sEntiment Reasoner) sentiment analysis tool from NLTK to analyze the sentiment of the news article titles. It calculates the sentiment scores (positive, negative, neutral, and compound) for each title and adds them to the DataFrame.
-
-**5. Visualization:**
-
-The code visualizes the sentiment scores by grouping them based on the ticker and date columns. It calculates the mean sentiment score for each date and plots a bar chart showing the sentiment trend over time.
-
-**6. Sentiment Classification:**
-
-The code classifies the sentiment of each news article title as positive, negative, or neutral based on the compound sentiment score. It adds a "Sentiment" column to the DataFrame with the corresponding classification.
-
-**7. Visualization of Sentiment Distribution:**
-
-The code calculates the percentage distribution of positive, negative, and neutral sentiments and visualizes it using a pie chart.
-
-**8. Importing Stock Data:**
-
-The code imports stock data using the `yfinance` library and downloads it to a CSV file named "stock.csv". It then reads the CSV file into a DataFrame.
-
-**9. Stock Close Periods Visualization:**
-
-The code plots a line chart to visualize the closing prices of the stock over a period of time.
-
-**10. Stock Sentiment Visualization:**
-
-The code plots a line chart to visualize the sentiment scores of the stock news articles over time.
-
-**11. Data Preparation for Prediction:**
-
-The code prepares the data for stock price prediction by selecting the required features and target variables. It creates a window of past data points and their corresponding sentiment scores.
-
-**12. Scaling Data:**
-
-The code scales the features and target variables using the MinMaxScaler from the `sklearn.preprocessing` module.
-
-**13. Prediction using XGBoost Regressor:**
-
-The code uses the XGBoost regressor from the `xgboost` library to train a model and make predictions on the test data. It evaluates the model's performance using metrics such as Root Mean Squared Error (RMSE) and R-squared.
-
-**14. Visualization of Predicted vs. Real Stock Prices:**
-
-The code visualizes the predicted and real stock prices using a line chart.
-
-**15. Accuracy Calculation and Decision Tree Classification:**
-
-The code calculates the accuracy of the predicted stock prices compared to the real prices. It also performs decision tree classification on the data to predict stock price movement.
-
-**Conclusion:**
-
-This code provides a comprehensive workflow for stock news sentiment analysis, visualization, and prediction. It scrapes news articles, performs sentiment analysis, visualizes sentiment trends, and predicts stock prices using XGBoost regressor and decision tree classification. The code offers valuable insights into stock market sentiment and can assist in making informed investment decisions.
-
-Note: The code is presented as is, and improvements or modifications can be made to enhance its functionality and accuracy.
+**Note:** Replace `<repository_url>` with the actual URL of the GitHub repository.
